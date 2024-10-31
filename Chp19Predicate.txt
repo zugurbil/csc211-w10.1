@@ -13,6 +13,12 @@ public class Main {
         names.add("Eve");
 
         // Define a Predicate to filter names longer than 4 characters
+        /***********************************************************************************************************
+        Predicate<T> interface is a functional interface that represents a single argument function that returns
+        a boolean value. It is commonly used to evaluate whether a certain condition holds true for a given input.
+        Predicate is often used for filtering collections, evaluating conditions, or as part of functional programming 
+        constructs in Java T indicates that the Predicate can be used with any type.
+        **************************************************************************************************************/
         Predicate<String> isLongerThanFour = name -> name.length() > 4;
 
         // Filter and print names that satisfy the Predicate
