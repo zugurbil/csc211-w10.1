@@ -14,7 +14,10 @@ public class Main {
 
         // Define a Function to get the length of a string
         Function<String, Integer> getLength = name -> name.length();
-
+        /*******************************************************************************************************************
+        The type parameters T and R indicate that the Function can operate on any input type T and return any output type R.
+         Function is used for transforming data, applying operations to collections, and in functional programming constructs.
+         *******************************************************************************************************************/
         // Apply the Function to the list of names and print their lengths
         System.out.println("Lengths of names:");
         for (String name : names) {
