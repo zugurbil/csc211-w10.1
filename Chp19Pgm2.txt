@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.function.Consumer;
+
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an ArrayList and add 5 strings
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Cherry");
+        list.add("Date");
+        list.add("Elderberry");
+
+        // Define a Consumer to print each element
+        Consumer<String> printItem = item -> 
+        {System.out.println(item);
+        };
+
+        // Use forEach with the Consumer to print each element
+        //list.forEach(printItem);
+        
+        Iterator <String > iter=list.iterator();
+        while (iter.hasNext()) {
+            String name = iter.next();
+            System.out.println(name+"XXXXXXXXXX");
+            if(name.equals("Cherry"))
+            {
+                iter.forEachRemaining(printItem);
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,45 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Iterator;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an ArrayList and add 5 names
+        ArrayList<String> names = new ArrayList<>();
+        names.add("John");
+        names.add("Amy");
+        names.add("Chris");
+        names.add("Eve");
+        names.add("Mark");
+
+        // Copy the ArrayList into a LinkedList
+        LinkedList<String> linkedNames = new LinkedList<>(names);
+
+        // Add a new name to the end of the LinkedList
+        linkedNames.add("Nancy");
+
+        // Use the addFirst and addLast methods
+        linkedNames.addFirst("FirstName"); // Adding a name at the beginning
+        linkedNames.addLast("LastName");   // Adding a name at the end
+
+        
+
+        // Print the first and last names
+        System.out.println("First name: " + linkedNames.getFirst());
+        System.out.println("Last name: " + linkedNames.getLast());
+
+        // Remove the first and last names
+        linkedNames.removeFirst();
+        linkedNames.removeLast();
+
+        // Print the current state of the LinkedList
+        System.out.println("LinkedList after removing first and last names: " + linkedNames);
+
+        // Print the LinkedList in reverse order using descendingIterator
+        System.out.println("LinkedList in reverse order:");
+        Iterator<String> descendingIterator = linkedNames.descendingIterator();
+        while (descendingIterator.hasNext()) {
+            System.out.println(descendingIterator.next());
+        }
+    }
+}

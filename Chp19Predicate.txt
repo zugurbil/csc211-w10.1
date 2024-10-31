@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Predicate;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a list of names
+        List<String> names = new ArrayList<>();
+        names.add("John");
+        names.add("Amy");
+        names.add("Chris");
+        names.add("Darleene");
+        names.add("Eve");
+
+        // Define a Predicate to filter names longer than 4 characters
+        Predicate<String> isLongerThanFour = name -> name.length() > 4;
+
+        // Filter and print names that satisfy the Predicate
+        System.out.println("Names longer than 4 characters:");
+        for (String name : names) {
+            if (isLongerThanFour.test(name)) {
+                System.out.println(name);
+            }
+        }
+    }
+}

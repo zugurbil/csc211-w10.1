@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an ArrayList and add 5 strings
+        ArrayList<String> names = new ArrayList<>();
+        names.add("Apple");
+        names.add("Banana");
+        names.add("Cherry");
+        names.add("Date");
+        names.add("Elderberry");
+
+        // Use forEach method with lambda to print each element
+        names.forEach(item -> System.out.println(item));
+        
+
+    }
+}

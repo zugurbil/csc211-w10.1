@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a list of names
+        List<String> names = new ArrayList<>();
+        names.add("John");
+        names.add("Amy");
+        names.add("Chris");
+        names.add("Darleene");
+        names.add("Eve");
+
+        // Define a Function to get the length of a string
+        Function<String, Integer> getLength = name -> name.length();
+
+        // Apply the Function to the list of names and print their lengths
+        System.out.println("Lengths of names:");
+        for (String name : names) {
+            int length = getLength.apply(name);
+            System.out.println(name + ": " + length);
+        }
+    }
+}

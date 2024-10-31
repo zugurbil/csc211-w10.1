@@ -1,0 +1,62 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an ArrayList and add 5 names
+        ArrayList<String> names = new ArrayList<>();
+        names.add("John");
+        names.add("Amy");
+        names.add("Chris");
+        names.add("Eve");
+        names.add("Mark");
+
+        // Copy the ArrayList into a LinkedList
+       LinkedList<String> linkedNames = new LinkedList<>(names);
+
+       System.out.println("LinkedList original: " + linkedNames);
+
+        // Add a new name to the end of the LinkedList
+        linkedNames.add("Nancy");
+
+        System.out.println("LinkedList after Nancy: " + linkedNames);
+
+        // Use ListIterator to find "Chris" and add "Darleene" after it
+        ListIterator<String> iterator = linkedNames.listIterator();
+        while (iterator.hasNext()) {
+            String name = iterator.next();
+            if (name.equals("Chris")) {
+                // Add "Darleene" after "Chris"
+                iterator.add("Darleene");
+                break; // Exit after adding "Darleene"
+            }
+        }
+        System.out.println("LinkedList with Darline: " + linkedNames);
+
+        int index = linkedNames.indexOf("Chris");
+        if (index != -1) {
+            linkedNames.add(index + 1, "Carlos");
+        }
+
+        // Print the LinkedList after modifications
+        System.out.println("LinkedList after Carlos: " + linkedNames);
+
+       // Replace the first name with "Alfonso"
+        linkedNames.set(0, "Alfonso");
+
+        // Remove the element after the first one
+        linkedNames.remove(1);
+
+        // Print the LinkedList after modifications
+        System.out.println("LinkedList after modifications: " + linkedNames);
+
+	// Print the LinkedList in reverse order
+        System.out.println("LinkedList in reverse order:");
+        for (int i = linkedNames.size() - 1; i >= 0; i--) {
+            System.out.println(linkedNames.get(i));
+        }
+
+
+    }
+}

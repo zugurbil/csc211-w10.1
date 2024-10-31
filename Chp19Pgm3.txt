@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+import java.util.function.Predicate;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an ArrayList and add 5 names
+        ArrayList<String> names = new ArrayList<>();
+        names.add("John");
+        names.add("Amy");
+        names.add("David");
+        names.add("Eve");
+        names.add("Mark");
+
+        // Print the list before removing
+        System.out.println("Before removing names longer than 4 characters: " + names);
+
+        // Define a Predicate to filter names longer than 4 characters
+        Predicate<String> longerThanFour = name -> name.length() > 4;
+
+        // Remove names that match the Predicate
+        names.removeIf(longerThanFour);
+
+        // Print the list after removing
+        System.out.println("After removing names longer than 4 characters: " + names);
+    }
+}
