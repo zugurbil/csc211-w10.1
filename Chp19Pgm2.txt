@@ -14,9 +14,15 @@ public class Main {
         list.add("Elderberry");
 
         // Define a Consumer to print each element
+        /***************************************************************************************************
+	  Consumer <T> is the type ()  - > T
+          Consumer<T> interface is a functional interface that represents an operation that 
+          accepts a single input argument and returns no result.
+         ****************************************************************************************************/
         Consumer<String> printItem = item -> 
-        {System.out.println(item);
-        };
+               {
+               System.out.println(item);
+               };
 
         // Use forEach with the Consumer to print each element
         //list.forEach(printItem);

@@ -14,6 +14,16 @@ public class Main {
         // Print the list before removing
         System.out.println("Before removing names longer than 4 characters: " + names);
 
+        /****************************************************************************************************
+         Predicate <T> is the type T - > Boolean
+         Predicate<T> interface is a functional interface that represents a single argument function that 
+         returns a boolean value. It is commonly used to evaluate whether a certain condition holds true 
+         for a given input.
+         Predicate is often used for filtering collections, evaluating conditions, or as part of functional 
+         programming constructs in Java. T indicates that the Predicate can be used with any type.
+
+        *****************************************************************************************************/
+
         // Define a Predicate to filter names longer than 4 characters
         Predicate<String> longerThanFour = name -> name.length() > 4;
 
