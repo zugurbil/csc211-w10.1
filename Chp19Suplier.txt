@@ -3,7 +3,14 @@ import java.util.function.Supplier;
 
 public class Main {
     public static void main(String[] args) {
-        // Create a Supplier that generates random integers
+        // Create a Supplier that generates random integers            
+        /**************************************************************************************************
+        Suppliers <T> is the type ()  - > T
+        Supplier<T> interface is a functional interface that represents a supplier of results. It is part 
+        of the java.util.function package and is used to generate or supply instances of a particular type T.
+        Unlike Function<T, R>, Supplier does not take any parameters.
+        ****************************************************************************************************/
+
         Supplier<Integer> randomSupplier = () -> new Random().nextInt(100); // Random number between 0 and 99
 
         // Generate and print random numbers
